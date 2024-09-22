@@ -18,19 +18,13 @@ import { toast } from "@/hooks/use-toast";
 import { Input } from "@/components/ui/input";
 import { createClient } from "@/utils/supabase/client";
 import { nanoid } from "nanoid";
-import { Profile } from "@/graphql/__generated__/graphql";
 
-type Props = {
-  profile: Profile;
-};
-
-export default function ChangeAvatar(props: Props) {
-  const { profile } = props;
+export default function ChangeAvatar() {
   const [open, setOpen] = React.useState(false);
   const [selectedFile, setSelectedFile] = React.useState<File | null>(null);
   const [uploaded, setUploaded] = React.useState<string | null>(null);
   const inputRef = React.useRef<HTMLInputElement>(null);
-
+  console.log(uploaded);
   const supabase = createClient();
 
   const UPDATE_AVATAR = gql`
@@ -42,8 +36,7 @@ export default function ChangeAvatar(props: Props) {
     }
   `;
 
-  const [updateAvatar, { data: _, loading, error }] =
-    useMutation(UPDATE_AVATAR);
+  const [updateAvatar] = useMutation(UPDATE_AVATAR);
 
   const handleUpload = async () => {
     console.log(selectedFile);
@@ -84,18 +77,6 @@ export default function ChangeAvatar(props: Props) {
     }
   };
 
-  function onSubmit() {
-    toast({
-      title: "Updated Successfully",
-      description: (
-        <div className="mt-2 w-[340px] rounded-md">
-          <div>You updated your profile picture. </div>
-        </div>
-      ),
-    });
-
-    setOpen(false);
-  }
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>

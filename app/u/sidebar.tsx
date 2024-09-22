@@ -3,61 +3,61 @@
 // import CreateClan from "@/components/dialogs/createClan";
 
 import * as React from "react";
-import { CaretSortIcon } from "@radix-ui/react-icons";
-import { Icon } from "@iconify/react";
-import { Button } from "@/components/ui/button";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
+// import { CaretSortIcon } from "@radix-ui/react-icons";
+// import { Icon } from "@iconify/react";
+// import { Button } from "@/components/ui/button";
+// import {
+//   Collapsible,
+//   CollapsibleContent,
+//   CollapsibleTrigger,
+// } from "@/components/ui/collapsible";
 import UserButton from "@/components/user-botton";
-import Link from "next/link";
+// import Link from "next/link";
 
 export default function UserSidebar() {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const navigation = [
-    // {
-    //   name: "Review",
-    //   href: `/u/`,
-    //   icon: "solar:bolt-line-duotone",
-    //   current: false,
-    //   coming_soon: false,
-    // },
-    // {
-    //   name: "Clans",
-    //   href: `/u/clans`,
-    //   icon: "lets-icons:setting-alt-line-duotone-line",
-    //   coming_soon: false,
-    // },
-    // {
-    //   name: "Spaces",
-    //   href: `/u/spaces`,
-    //   icon: "solar:chat-round-call-line-duotone",
-    // },
-    // {
-    //   name: "Decisions",
-    //   href: `/u/decisions`,
-    //   icon: "solar:transfer-vertical-bold-duotone",
-    // },
-    {
-      name: "Collections",
-      href: `/u/collections`,
-      icon: "solar:safe-square-line-duotone",
-    },
+  // const [isOpen, setIsOpen] = React.useState(false);
+  // const navigation = [
+  //   // {
+  //   //   name: "Review",
+  //   //   href: `/u/`,
+  //   //   icon: "solar:bolt-line-duotone",
+  //   //   current: false,
+  //   //   coming_soon: false,
+  //   // },
+  //   // {
+  //   //   name: "Clans",
+  //   //   href: `/u/clans`,
+  //   //   icon: "lets-icons:setting-alt-line-duotone-line",
+  //   //   coming_soon: false,
+  //   // },
+  //   // {
+  //   //   name: "Spaces",
+  //   //   href: `/u/spaces`,
+  //   //   icon: "solar:chat-round-call-line-duotone",
+  //   // },
+  //   // {
+  //   //   name: "Decisions",
+  //   //   href: `/u/decisions`,
+  //   //   icon: "solar:transfer-vertical-bold-duotone",
+  //   // },
+  //   {
+  //     name: "Collections",
+  //     href: `/u/collections`,
+  //     icon: "solar:safe-square-line-duotone",
+  //   },
 
-    // {
-    //   name: "Calendar",
-    //   href: `/u/calendar`,
-    //   icon: "solar:calendar-date-line-duotone",
-    // },
-    // {
-    // 	name: 'Pages',
-    // 	href: `/u/pages`,
-    // 	icon: 'solar:notes-line-duotone',
-    // 	coming_soon: false
-    // }
-  ];
+  //   // {
+  //   //   name: "Calendar",
+  //   //   href: `/u/calendar`,
+  //   //   icon: "solar:calendar-date-line-duotone",
+  //   // },
+  //   // {
+  //   // 	name: 'Pages',
+  //   // 	href: `/u/pages`,
+  //   // 	icon: 'solar:notes-line-duotone',
+  //   // 	coming_soon: false
+  //   // }
+  // ];
   return (
     <div className="flex grow flex-col gap-y-5 overflow-y-auto border-r bg-white px-6">
       <div className="mt-4 flex gap-x-2 items-center">

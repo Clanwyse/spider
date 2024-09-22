@@ -10,7 +10,6 @@ import {
   FormItem,
   Form,
   FormDescription,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { toast } from "@/hooks/use-toast";
@@ -55,7 +54,7 @@ export default function EditBio(props: Props) {
     }
   `;
 
-  const [updateBio, { data, loading, error }] = useMutation(UPDATE_BIO);
+  const [updateBio] = useMutation(UPDATE_BIO);
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -101,7 +100,7 @@ export default function EditBio(props: Props) {
                     {/* <FormLabel>Bio</FormLabel> */}
                     <FormControl>
                       <textarea
-                        placeholder="Tell us a little bit about yourself"
+                        placeholder={profile?.bio as string}
                         className="resize-none w-full"
                         {...field}
                       />

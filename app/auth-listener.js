@@ -43,7 +43,7 @@ export default function AuthListener({ children }) {
     return () => {
       subscription.unsubscribe();
     };
-  }, [router]);
+  }, [router, "supabase.auth"]);
 
   return children;
 }

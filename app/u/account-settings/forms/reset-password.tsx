@@ -5,7 +5,6 @@ import { Profile } from "@/graphql/__generated__/graphql";
 
 import { Button } from "@/components/ui/button";
 
-import React from "react";
 import { createClient } from "@/utils/supabase/client";
 
 type Props = {
@@ -14,11 +13,10 @@ type Props = {
 
 export default function ResetPassword(props: Props) {
   const { profile } = props;
-  const [open, setOpen] = React.useState(false);
   const supabase = createClient();
 
   async function onSubmit() {
-    const { data, error } = await supabase.auth.resetPasswordForEmail(
+    const { error } = await supabase.auth.resetPasswordForEmail(
       profile.email as string
     );
 
@@ -41,8 +39,6 @@ export default function ResetPassword(props: Props) {
         </div>
       ),
     });
-
-    setOpen(false);
   }
   return (
     <div>

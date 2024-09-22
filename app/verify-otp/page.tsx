@@ -43,7 +43,7 @@ function InputOTPForm() {
   });
 
   async function onSubmit(values: z.infer<typeof FormSchema>) {
-    const { data, error } = await supabase.auth.verifyOtp({
+    const { error } = await supabase.auth.verifyOtp({
       email: email,
       token: values.pin,
       type: "email",

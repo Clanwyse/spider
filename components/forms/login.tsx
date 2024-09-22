@@ -41,7 +41,7 @@ export default function LoginForm({ className }: React.ComponentProps<"form">) {
     // ✅ This will be type-safe and validated.
     setProcessing(true);
 
-    const { data, error } = await supabase.auth.signInWithOtp({
+    const { error } = await supabase.auth.signInWithOtp({
       email: values.email,
       options: {
         emailRedirectTo: "http://localhost:3000/",

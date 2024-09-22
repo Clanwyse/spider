@@ -1,6 +1,6 @@
 "use client";
 
-import { ApolloLink, HttpLink, split } from "@apollo/client";
+import { HttpLink, split } from "@apollo/client";
 import {
   ApolloNextAppProvider,
   ApolloClient,
@@ -12,7 +12,6 @@ import * as AbsintheSocket from "@absinthe/socket";
 import { createAbsintheSocketLink } from "@absinthe/socket-apollo-link";
 import { Socket as PhoenixSocket } from "phoenix";
 import { getMainDefinition } from "@apollo/client/utilities";
-import React, { useEffect, useState } from "react";
 
 const phoenixSocket = new PhoenixSocket(
   `${process.env.NEXT_PUBLIC_CLANWYSE_WS_URL}/rainforest/v1/socket`,

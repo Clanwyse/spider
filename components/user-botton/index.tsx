@@ -18,10 +18,8 @@ import { gql } from "@apollo/client";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
-import { useState } from "react";
 
 export default function UserButton() {
-  const [profile, setprofile] = useState(null);
   const supabase = createClient();
   const router = useRouter();
 
@@ -36,7 +34,7 @@ export default function UserButton() {
     }
   `;
 
-  const { data, error, loading } = useQuery(query, {
+  const { data, loading } = useQuery(query, {
     fetchPolicy: "cache-first",
   });
 

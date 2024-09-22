@@ -3,14 +3,11 @@
 import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { createClient } from "@/utils/supabase/client";
 
 import { useQuery } from "@apollo/client";
 import { gql } from "@apollo/client";
 import UserHeader from "../header";
 export default function Profile() {
-  const supabase = createClient();
-
   const query = gql`
     query me {
       me {
@@ -22,7 +19,7 @@ export default function Profile() {
     }
   `;
 
-  const { data, error, loading } = useQuery(query, {
+  const { data } = useQuery(query, {
     fetchPolicy: "cache-first",
   });
 

@@ -39,16 +39,11 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { toast } from "@/hooks/use-toast";
-import { Profile } from "@/graphql/__generated__/graphql";
 
-type Props = {
-  profile: Profile;
-};
 const FormSchema = z.object({
   dob: z.date(),
 });
-export default function AddDOB(props: Props) {
-  const { profile } = props;
+export default function AddDOB() {
   const [open, setOpen] = React.useState(false);
 
   const UPDATE_BIO = gql`

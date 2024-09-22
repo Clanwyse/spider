@@ -1,5 +1,4 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
 import { Profile } from "@/graphql/__generated__/graphql";
 
 import { Icon } from "@iconify/react";
@@ -40,7 +39,7 @@ export default function AccountGeneral(props: Props) {
               </Avatar>
             </span>
             <span className="ml-4 flex-shrink-0">
-              <ChangeAvatar profile={profile} />
+              <ChangeAvatar />
             </span>
           </dd>
         </div>
@@ -137,7 +136,7 @@ export default function AccountGeneral(props: Props) {
           date.`}
             </span>
             <span className="ml-4 flex-shrink-0">
-              <AddDOB profile={profile} />
+              <AddDOB />
             </span>
           </dd>
         </div>

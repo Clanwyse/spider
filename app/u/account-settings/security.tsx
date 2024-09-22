@@ -1,9 +1,6 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
 import { Profile } from "@/graphql/__generated__/graphql";
 
 import { Icon } from "@iconify/react";
-import EnableNotifications from "./forms/enable-notification";
 import ResetPassword from "./forms/reset-password";
 
 type Props = {

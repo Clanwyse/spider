@@ -47,7 +47,7 @@ export default function EditEmail(props: Props) {
     }
   `;
 
-  const [updateBio, { data, loading, error }] = useMutation(UPDATE_EMAIL);
+  const [updateBio] = useMutation(UPDATE_EMAIL);
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),

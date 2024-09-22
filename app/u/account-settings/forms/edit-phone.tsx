@@ -54,7 +54,7 @@ export default function EditPhone(props: Props) {
     }
   `;
 
-  const [updateBio, { data, loading, error }] = useMutation(UPDATE_PHONE);
+  const [updateBio] = useMutation(UPDATE_PHONE);
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
