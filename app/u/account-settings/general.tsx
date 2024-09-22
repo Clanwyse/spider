@@ -1,5 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Profile } from "@/graphql/__generated__/graphql";
+import type { Profile } from "@/graphql/__generated__/graphql";
 
 import { Icon } from "@iconify/react";
 import EnableNotifications from "./forms/enable-notification";

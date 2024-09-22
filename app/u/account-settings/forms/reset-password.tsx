@@ -1,7 +1,7 @@
 "use client";
 
 import { toast } from "@/hooks/use-toast";
-import { Profile } from "@/graphql/__generated__/graphql";
+import type { Profile } from "@/graphql/__generated__/graphql";
 
 import { Button } from "@/components/ui/button";
 

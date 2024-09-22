@@ -12,7 +12,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { toast } from "@/hooks/use-toast";
-import { Profile } from "@/graphql/__generated__/graphql";
+import type { Profile } from "@/graphql/__generated__/graphql";
 
 import {
   Dialog,
