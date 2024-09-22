@@ -55,7 +55,7 @@ export default function AddDOB() {
     }
   `;
 
-  const [updateBio, { data, loading, error }] = useMutation(UPDATE_BIO);
+  const [updateBio] = useMutation(UPDATE_BIO);
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),

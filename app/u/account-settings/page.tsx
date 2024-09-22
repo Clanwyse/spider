@@ -1,5 +1,5 @@
 "use client";
-import { createClient } from "@/utils/supabase/client";
+
 import UserHeader from "../header";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useQuery } from "@apollo/client";
@@ -8,7 +8,6 @@ import AccountGeneral from "./general";
 import AccountSecurity from "./security";
 
 export default function AccountSettings() {
-  const supabase = createClient();
   const query = gql`
     query me {
       me {
@@ -25,7 +24,7 @@ export default function AccountSettings() {
       }
     }
   `;
-  const { data, error, loading } = useQuery(query, {
+  const { data } = useQuery(query, {
     fetchPolicy: "cache-first",
   });
 

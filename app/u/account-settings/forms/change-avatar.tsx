@@ -14,7 +14,6 @@ import React from "react";
 
 import { Button } from "@/components/ui/button";
 
-import { toast } from "@/hooks/use-toast";
 import { Input } from "@/components/ui/input";
 import { createClient } from "@/utils/supabase/client";
 import { nanoid } from "nanoid";
