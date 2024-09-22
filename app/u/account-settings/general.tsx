@@ -1,5 +1,4 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import type { Profile } from "@/graphql/__generated__/graphql";
 
 import { Icon } from "@iconify/react";
 import EnableNotifications from "./forms/enable-notification";
@@ -8,6 +7,7 @@ import AddDOB from "./forms/add-dob";
 import ChangeAvatar from "./forms/change-avatar";
 import EditPhone from "./forms/edit-phone";
 import EditEmail from "./forms/change-email";
+import { Profile } from "@/generated/graphql";
 
 type Props = {
   profile: Profile;

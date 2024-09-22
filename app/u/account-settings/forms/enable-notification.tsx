@@ -7,7 +7,7 @@ import { z } from "zod";
 import { FormControl, FormField, FormItem, Form } from "@/components/ui/form";
 import { Switch } from "@/components/ui/switch";
 import { toast } from "@/hooks/use-toast";
-import type { Profile } from "@/graphql/__generated__/graphql";
+import { Profile } from "@/generated/graphql";
 
 type Props = {
   profile: Profile;

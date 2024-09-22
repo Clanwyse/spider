@@ -1,11 +1,11 @@
 "use client";
 
 import { toast } from "@/hooks/use-toast";
-import type { Profile } from "@/graphql/__generated__/graphql";
 
 import { Button } from "@/components/ui/button";
 
 import { createClient } from "@/utils/supabase/client";
+import { Profile } from "@/generated/graphql";
 
 type Props = {
   profile: Profile;

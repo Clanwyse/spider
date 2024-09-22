@@ -12,7 +12,6 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { toast } from "@/hooks/use-toast";
-import type { Profile } from "@/graphql/__generated__/graphql";
 
 import {
   Dialog,
@@ -27,6 +26,7 @@ import { Button } from "@/components/ui/button";
 import { gql, useMutation } from "@apollo/client";
 import React from "react";
 import { Input } from "@/components/ui/input";
+import { Profile } from "@/generated/graphql";
 
 type Props = {
   profile: Profile;

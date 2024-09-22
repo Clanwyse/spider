@@ -1,7 +1,6 @@
-import type { Profile } from "@/graphql/__generated__/graphql";
-
 import { Icon } from "@iconify/react";
 import ResetPassword from "./forms/reset-password";
+import { Profile } from "@/generated/graphql";
 
 type Props = {
   profile: Profile;
